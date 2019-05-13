@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!--Nuestros estilos :v -->
+  <link rel="stylesheet" href="css/estiloHome2.css">
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+    					HEADER
+======================================================== -->
+  <header class="sticky-top">
+    <img class="log imgLogo" src="img/imagen.png">
+    <!--BARRA DE NAVEGACIÓN -->
+
+   <div class=" ">
+
+   <div class="col-md-6 mx-auto">
+
+        
+
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Perfil<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Juegos</a>
+            <a class="nav-item nav-link" href="#">Artículos</a>
+            <a class="nav-item nav-link" href="#">Jam</a>
+          </div>
+        </div>
+      </nav>  
+    </div>
+    </div>
+  </header>
+
+
+
+<!-- =====================================================
+    					SIDEBAR
+======================================================== -->
+  <nav id="sidebar">
+
+  			<div class="togSidebar">
+          <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <h2>Menú</h2>
+          </button>
+        </div>
+
+    <h4>REGISTRO</h4>
+
+      <div class="row" id="datosUsuario">
+
+        <div class="col-md-6" id="menuRegistro-1">
+          <img id="imagenUsuario" src="img/pokeball.svg" alt="usuario anónimo">
+        </div>  
+
+        <div class="col-md-6" id="menuRegistro-2">
+          <h5 id="nombreUsuario">Leono</h5>
+          <p id="citaUsuario">The biggest dreamer</p>
+          <a type="button" class="btn btn-outline-info" href="views/index.ejs" >¡Ingresar!</a>
+        </div>  
+      </div>
+
+      <div class="row justify-content-md-start" id="barraBuscar">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+
+      <div class="row" id="menuTags">
+
+        <div class="col-md-6" id="menuTags-1">
+      
+          <h5>Tags</h5>        
+          <a href="#">Plataforma</a>
+          <a href="#">RPG</a>
+          <a href="#">Acción</a>
+          <a href="#">Plataforma</a>
+
+          <h5>Ranking</h5>
+
+          <h5>Status</h5>
+          <a href="#">Terminado</a>
+          <a href="#">Demo</a>
+          <a href="#">En desarrollo</a>
+          <a href="#">Idea</a>
+        </div>  
+
+        <div class="col-md-6" id="menuTags-2">
+          <h5>Categoría</h5>
+          <a href="#">unodos</a>
+          <a href="#">trescuatro</a>
+
+          <h5>Clasificación</h5>
+          <a href="#">Niños</a>
+          <a href="#">Adolescentes</a>
+          <a href="#">Mayores de edad</a>
+        </div>  
+      </div>
+
+      </nav>
+
+ <!-- =====================================================
+    					CONTENIDO
+======================================================== -->             
+      <div id="content" class="row">
+        <section id="contenido">
+          <!-- CONTENIDO DE LA PAGINA -->
+
+          <div class="col-md-12">
+          <!-- ENCABEZADO DE LA PAGINA -->
+          <div  class="col-md-12">
+            <h3 id="tituloP">INICIO</h3>
+          </div>
+
+            <!-- ESPACIO CAROUSEL DE NOTICIAS -->
+            <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img  src="img/tetris.gif" alt="Quienes somos">
+                  <div class="carousel-caption">
+                    <h3>¿Quienes somos?</h3>
+                    <p>Nos dedicamos al blablabla del bleble ble para bliblibli</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/soon.jpeg" alt="Eventos proximos">
+                  <div class="carousel-caption">
+                    <h3>Eventos próximos</h3>
+                    <p>Porque ustedes lo pidieron</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/gameover.png" alt="Eventos pasados">
+                  <div class="carousel-caption">
+                    <h3>Eventos pasados</h3>
+                    <p>De lo que se perdieron</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- CARDS MUESTRA -->
+          <div class="card-columns">
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	<div class="card">
+          		<img class="card-img-top" src="img/camera.jpg" alt="Card image cap">
+          		<div class="card-block">
+          			<h4 class="card-title">Card title</h4>
+          			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          		</div>
+          		<div class="card-footer">
+          			<small class="text-muted">Last updated 3 mins ago</small>
+          		</div>
+          	</div>
+          	
+        </div>
+
+
+
+
+        
+    </section>
+        <!-- PIE DE PAGINA -->   
+    </div>
+<!-- =====================================================
+    					FOOTER
+======================================================== -->
+    <footer>
+<div id="pie">
+
+    <div id="pie2" class="row justify-content-around">
+
+            <div class="col-md-2">
+            <img id="secul" src="img/secul.jpg">
+            </div>
+
+
+            <div class="col-md-2">
+            </div>
+
+            <div class="col-md-2">
+            </div>
+
+
+            <div class="col-md-2">
+            </div>
+
+        </div>
+        </div>
+    </footer>
+
+
+    <div id="overlay"></div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+
+        /*
+        if(document.getElementById("overlay").style.display == "block" && screen.width < 768)
+  		{
+      		document.getElementById("overlay").style.display = "none";
+  		}
+  		else 
+  		{
+      		document.getElementById("overlay").style.display = "block";
+  		} 
+  		*/
+
+      });
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('includes/metaHead'); %>
+  <!--Nuestros estilos :v -->
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+              HEADER
+======================================================== -->
+<%- include('includes/headMain'); %> 
+
+
+ <!-- =====================================================
+    					CONTENIDO
+======================================================== -->             
+      <div>
+        	
+
+        	<span class="fa fa-cut">
+        	<p>Pesiona para redimensionar una nueva imagen</p>
+        	<a href="/resizeinator" class="btn btn-primary btn-lg">Redimensionador</a>
+
+        	<br/><br/><br/><br/><br/>
+
+
+			<div class="page-header text center">
+				<h1><span class="fa fa-home"></span> Página de perfil </h1>
+				<a href="/logout" class="btn btn-primary btn-sm"> Cerrar Sesión </a>
+			</div>
+
+			<div class="row">
+				<!-- LOCAL INFORMATION -->
+				<div class="col-sm-6">
+					<div class="well">
+						<h3><span class="fa fa-user"></span> <%= user.nombre %> </h3>
+						<p>
+							<strong>id</strong>: <%= user._id %><br>
+							<strong>email</strong>: <%= user.local.email %><br>
+							<strong>password</strong>: <%= user.local.password %><br>
+						</p>
+					</div>
+				</div>				
+			</div>
+			<a href="/perfil/usuario/<%= user.local.email %>" class="btn btn-primary btn-sm"> Modificar datos</a>
+			<br/><br/><br/><br/><br/>
+
+			<div class="page-header text center">
+				<h1><span class="fa fa-image"></span> Imágenes </h1>
+			</div>
+			<a href="#" class="btn btn-primary btn-sm"> Eliminar </a>
+			<a href="#" class="btn btn-primary btn-sm"> Modificar </a>
+<br/><br/><br/><br/><br/>
+		</div>
+<!-- =====================================================
+              FOOTER
+======================================================== -->
+<%- include('includes/footer'); %> 
+
+<%- include('includes/externalSource'); %> 
+
+
+  <script src="/js/global.js"></script>
+  
+  </body>
+</html>

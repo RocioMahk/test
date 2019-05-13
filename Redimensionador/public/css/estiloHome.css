@@ -1,0 +1,49 @@
+header {
+	
+	background-color: lightblue;
+	width: 100%;*
+
+}
+
+footer {
+	background-color: lightblue;
+	/*
+	position: sticky;
+	*/
+	left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+#navbarTogglerDemo01 {
+	text-align: center;
+}
+
+#menuRegistro-1 {
+	background-color: #ffa366;
+}
+
+#tarjetas {
+	background-color: #e6ffe6;
+
+}
+
+#vacio {
+	background-color: #ffe6f7;
+	/*margin-top: 8%;*/
+}
+
+#imagenUsuario {
+	width: 100%;
+	height: 100px;
+}
+
+.imagenCard{
+	width: 100%;
+	height: 200px;
+}
+
+

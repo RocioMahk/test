@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('includes/metaHead'); %>
+  <!--Nuestros estilos :v -->
+  <link rel="stylesheet" type="text/css" href="/css/admin.css">
+</head>
+
+<body>
+
+
+<!-- =====================================================
+              HEADER
+======================================================== -->
+  <%- include('includes/headAdmin'); %>
+  <%- include('includes/sidebarAdmin');%>
+
+ <!-- =====================================================
+              CONTENIDO
+======================================================== -->
+       <div id="content" class="row">
+        <section id="contenido" class="col-md-12">
+          <div class="col-xs-12 mx-auto" style="width: 100%; text-align: center;  font-size: 25px;">
+          Usuarios
+          </div>
+          <div class="row justify-content-end">
+            <div>
+              <a class="btn btn-lg btn-primary" role="button" role="button" href="/admin/usuarios/crear">Crear nuevo</a>
+            </div>
+          </div>
+
+          <table>
+            <tr>
+              <th>NOMBRE</th>
+              <th>EMAIL</th>
+              <th>CREADO</th>
+              
+            </tr>
+
+            <%
+            for(x = 0; x < data.usuarios.length; x++)
+            {%>
+            <tr>
+              <td><a href="/admin/usuario/<%= data.usuarios[x].local.email %>"><%= data.usuarios[x].nombre %> </a></td>
+              <td><a href="/admin/usuario/<%= data.usuarios[x].local.email %>"><%= data.usuarios[x].local.email %></a></td>
+              <td><%= data.usuarios[x].parsedCreado %></td>
+            </tr>
+            <%}
+            %>
+
+
+          </table>
+
+
+        </section>
+        </div>
+
+
+<%- include('includes/externalSource'); %>
+
+
+  <script src="/js/global.js"></script>
+
+  </body>
+</html>

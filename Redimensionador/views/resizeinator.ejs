@@ -1,0 +1,133 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('includes/metaHead'); %>
+  <!--Nuestros estilos :v -->
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+              HEADER
+======================================================== -->
+<%- include('includes/headMain'); %> 
+
+ <!-- =====================================================
+    					CONTENIDO
+======================================================== -->             
+     <!--  
+	<div class="portada col-md-11 mx-auto">
+	        		<img src="img/portadaPrueba.png">
+	</div>
+    --> 
+
+	<div class="page-header text center">
+		<h1><span class="fa fa-anchor"></span> ¿Te arrepentiste? </h1>
+		<a href="/logout" class="btn btn-primary btn-sm"> Cerrar Sesión </a>
+		<br/><br/>
+		<a href="/profile" class="btn btn-primary btn-sm"> Ir a Perfil </a>
+	</div>
+	<br/><br/>
+<!-- ===================
+=========Image======
+=================== -->
+<div class="page-header text center">
+	<h1><span class="fa fa-anchor"></span> Redimensiona aquí </h1>
+    
+	<input id="imageFile" name="imageFile" type="file" class="imageFile btn btn-primary btn-lg"  accept="image/*"   /> 
+	<br/><br/><br/>
+	<input type="button" value="Resize Image"  onclick="ResizeImage()" class="btn btn-primary btn-lg"/> 
+	<br/>
+	<img src="" id="preview"  >
+	<img src="" id="output">
+<!-- =============-->
+
+			
+
+			
+
+			
+<!-- =====================================================
+              FOOTER
+======================================================== -->
+<%- include('includes/footer'); %> 
+
+<%- include('includes/externalSource'); %> 
+
+  <script type="text/javascript">
+  	$(document).ready(function() {
+
+    $('#imageFile').change(function(evt) {
+
+        var files = evt.target.files;
+        var file = files[0];
+
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('preview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+
+function ResizeImage() {
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        var filesToUploads = document.getElementById('imageFile').files;
+        var file = filesToUploads[0];
+        if (file) {
+
+            var reader = new FileReader();
+            // Set the image once loaded into file reader
+            reader.onload = function(e) {
+
+                var img = document.createElement("img");
+                img.src = e.target.result;
+
+                var canvas = document.createElement("canvas");
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+
+                var MAX_WIDTH = 120;
+                var MAX_HEIGHT = 400;
+                var width = img.width;
+                var height = img.height;
+
+                if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+                canvas.width = width;
+                canvas.height = height;
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, width, height);
+
+                dataurl = canvas.toDataURL(file.type);
+                document.getElementById('output').src = dataurl;
+            }
+            reader.readAsDataURL(file);
+
+        }
+
+    } else {
+        alert('The File APIs are not fully supported in this browser.');
+    }
+}
+  </script>
+  <script src="/js/global.js"></script>
+  
+  </body>
+</html>
